@@ -1,4 +1,8 @@
 import './App.css'
+import BackgroundSlideshow from './components/BackgroundSlideshow.jsx'
+import Carousel from './components/Carousel.jsx'
+import DynamicCarousel from './components/DynamicCarousel.jsx'
+import jImEsterMazurek2020 from './assets/Jim & Ester Mazurek 2020.jpeg'
 
 const highlights = [
   {
@@ -62,22 +66,29 @@ const mediaLinks = {
 
 function App() {
   return (
-    <main className="newsletter-page">
+    <>
+      <BackgroundSlideshow />
+      <main className="newsletter-page">
+      <header className="site-header" aria-label="Site branding">
+        <div className="site-branding">
+          <img
+            className="site-logo"
+            src={jImEsterMazurek2020}
+            alt="Jim and Ester Mazurek"
+          />
+          <div className="site-branding__copy">
+            <p className="site-branding__eyebrow">Reaching Children</p>
+            <p className="site-branding__title">Raising Up Leaders</p>
+          </div>
+        </div>
+      </header>
       <section className="hero-panel">
         <div className="hero-copy">
-          <p className="eyebrow">Spring, 2026</p>
-          <h1>Reaching Children, Raising Up Leaders</h1>
+          <h1>Spring 2026</h1>
           <p className="lead">
-            A visual newsletter about Jim and Ester Mazurek's ministry in Chile:
-            children's outreach, educational expansion, and ministry on the move.
+            Latest news about our ministry in Chile: children's
+            outreach, educational expansion, and ministry on the move.
           </p>
-
-          <div className="hero-badges" aria-label="Newsletter highlights">
-            <span>Santiago, Chile</span>
-            <span>Patagonia</span>
-            <span>Panama</span>
-            <span>Chihuahua</span>
-          </div>
 
           <div className="hero-actions">
             <a href="#summary">View summary</a>
@@ -107,7 +118,17 @@ function App() {
               </div>
               <div>
                 <dt>Online Giving</dt>
-                <dd>Acct 238874</dd>
+                <dd className="online-giving-block">
+                  <a
+                    className="online-giving-button"
+                    href="https://giving.ag.org/donate"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Give Online
+                  </a>
+                  <span>Acct 238874</span>
+                </dd>
               </div>
             </dl>
           </div>
@@ -123,6 +144,8 @@ function App() {
           </article>
         ))}
       </section>
+
+      <Carousel title="Outreach in La Cisterna, Santiago de Chile" />
 
       <section className="story-layout">
         <article className="glass-card story-card">
@@ -169,6 +192,8 @@ function App() {
           ))}
         </div>
       </section>
+
+      <DynamicCarousel title="Our work in CMM" />
 
       <section className="media-section" aria-label="Mission videos">
         <div className="section-heading">
@@ -253,7 +278,8 @@ function App() {
           </ul>
         </article>
       </section>
-    </main>
+      </main>
+    </>
   )
 }
 
