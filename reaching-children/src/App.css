@@ -536,12 +536,13 @@
   border: 1px solid rgba(36, 23, 51, 0.08);
 }
 
-.video-frame video {
+.video-frame video,
+.video-frame iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
   display: block;
   background: #120f1b;
+  border: none;
 }
 
 .media-copy {

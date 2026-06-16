@@ -55,14 +55,6 @@ const supportPoints = [
   'Continue helping financially with the center expansion and itineration.',
 ]
 
-const mediaLinks = {
-  recap:
-    'https://ucc9ade756b16d92c908a6de37a9.dl.dropboxusercontent.com/cd/0/inline/DButizMndns2MtHWxC_7GwZVPxPbMOLq0U0zNajJYsN3qs8dH2SE_DHnZZm-raJAaQxDSXZNqK9p0FOzS5UdooBZYfxAWV74bqzYly539qWn5JkJOQp4wniNYr3otQI79qcqC-f43o7iFtX_B5MeL6BG/file?dl=1',
-  video2:
-    'https://uc6d4d269c2cae1bb919c7876526.dl.dropboxusercontent.com/cd/0/inline/DBvZQ9-k9cyQtEzOr1-2iFZXlBg8AV2MY2gfgp09gp1BQhtSnsVi2bQEUILuTvuoPZjH5j2GqPoDnMvqTP87I5VlkUCgcpROXLMuU_8BYNj3Y60UkKm21DUDWHl5V9RiTn1YMq1cS78t1_unRKcuWc9/file',
-  video3:
-    'https://uca5710b7e98b895383241fb0967.dl.dropboxusercontent.com/cd/0/inline/DBsuN6mEWezZa0_6X74uI8ybTsNbAe9tV3P-mDHUkrh_IuLPBVZTEanuZaiha5tkQ3R60kwhCcR_rUvMO9ph4GjCnLlGGQZSm9PKxMhchLaaBW53EAI4UBCAv2s77NLanstjCKXTqzk_AIOF3GnLoqNs/file',
-}
 
 function App() {
   return (
@@ -204,31 +196,28 @@ function App() {
         <div className="media-grid">
           <article className="glass-card video-card">
             <div className="video-frame">
-              <video controls playsInline preload="metadata">
-                <source src={mediaLinks.recap} type="video/quicktime" />
-                Your browser cannot play this video directly.
-              </video>
+              <iframe
+                src="https://www.youtube.com/embed/ADKTcdWpOk4"
+                title="Chile 2026 Missions Trip"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
             <div className="media-copy">
               <p className="card-label">Recap shared in service</p>
               <h3>Chile 2026 Missions Trip</h3>
-              <p>
-                The video summarizes the trip and should play directly in the
-                browser. If your browser has trouble with the file format, open
-                it in a new tab.
-              </p>
-              <a href={mediaLinks.recap} target="_blank" rel="noreferrer">
-                Open video
-              </a>
+              <p>The video summarizes the trip.</p>
             </div>
           </article>
 
           <article className="glass-card video-card">
             <div className="video-frame">
-              <video controls playsInline preload="metadata">
-                <source src={mediaLinks.video2} type="video/quicktime" />
-                Your browser cannot play this video directly.
-              </video>
+              <iframe
+                src="https://www.youtube.com/embed/-Sv7CL3ddoQ"
+                title="Evergreen Church Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
             <div className="media-copy">
               <p className="card-label">Partner story</p>
@@ -236,18 +225,17 @@ function App() {
               <p>
                 A short feature about Evergreen Church's work during the visit.
               </p>
-              <a href={mediaLinks.video2} target="_blank" rel="noreferrer">
-                Open video
-              </a>
             </div>
           </article>
 
           <article className="glass-card video-card">
             <div className="video-frame">
-              <video controls playsInline preload="metadata">
-                <source src={mediaLinks.video3} type="video/quicktime" />
-                Your browser cannot play this video directly.
-              </video>
+              <iframe
+                src="https://www.youtube.com/embed/PlPJVe-480Y"
+                title="Project Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
             <div className="media-copy">
               <p className="card-label">Project highlight</p>
@@ -256,9 +244,6 @@ function App() {
                 A closer look at a project featured during the trip and the
                 people involved.
               </p>
-              <a href={mediaLinks.video3} target="_blank" rel="noreferrer">
-                Open video
-              </a>
             </div>
           </article>
         </div>
