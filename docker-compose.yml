@@ -1,0 +1,10 @@
+services:
+  reaching-children:
+    build:
+      context: ./reaching-children
+      dockerfile: Dockerfile
+    image: reaching-children:latest
+    container_name: reaching-children
+    restart: unless-stopped
+    ports:
+      - "3001:80"
